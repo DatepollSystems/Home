@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    
+    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="https://kit.fontawesome.com/896818822e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      {{ partial "header.html" }}
+      {{.Content}}
+  </body>
+
+  <script src="/js/jquery.js"></script>
+  <script src="/js/materialize.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+  </script>
+</html>

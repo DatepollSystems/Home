@@ -1,0 +1,21 @@
+nav {
+    color: #607d8b;
+    background-color: white;
+}
+
+.hide-on-med-and-down li a {
+    color: #607d8b;
+    background-color: white;
+}
+
+nav img {
+    height: auto;
+    vertical-align: middle;
+    
+}
+
+.brand-logo {
+    margin-left: 10px;
+    color: #607d8b !important;
+    background-color: white;
+}
