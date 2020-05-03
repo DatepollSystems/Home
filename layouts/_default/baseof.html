@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>test</title>
+    <title>{{ .Site.Title }}</title>
     
     <link rel="stylesheet" href="/css/materialize.css">
     <link rel="stylesheet" href="/css/custom.css">
@@ -10,7 +10,10 @@
   </head>
   <body>
       {{ partial "header.html" }}
-      {{.Content}}
+      {{ block "main" .}}
+
+      {{ end }}
+      {{ partial "footer.html" }}
   </body>
 
   <script src="/js/jquery.js"></script>

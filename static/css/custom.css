@@ -1,4 +1,4 @@
-nav {
+nav *{
     color: #607d8b;
     background-color: white;
 }
@@ -14,8 +14,36 @@ nav img {
     
 }
 
+.text-right * { 
+    text-align: right;
+}
+
+.text-right { 
+    text-align: right;
+}
+
 .brand-logo {
     margin-left: 10px;
     color: #607d8b !important;
     background-color: white;
+}
+
+@media only screen and (max-width: 992px) {
+    .brand-logo-text {
+        display: none;
+    }
+}
+
+.heading {
+    color: #ffffff ;
+    text-align: center;
+    padding: 60px 0 60px 0;
+}
+
+.heading-row {
+    background-color: #607d8b;
+}
+
+.container {
+    width: 100%;
 }

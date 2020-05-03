@@ -1,3 +1,10 @@
-baseURL = "http://example.org/"
+baseURL = "http://datepoll.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Datepoll Home"
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
