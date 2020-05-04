@@ -1,9 +1,17 @@
 baseURL = "http://datepoll.org/"
 languageCode = "en-us"
 title = "Datepoll Home"
+
+[menus]
+  [[menu.main]]
+    identifier = "blog"
+    name = "This is the blog section"
+    title = "Blog"
+    url = "/blog/"
+    weight = -110
+
 [markup]
   defaultMarkdownHandler = "blackfriday"
-
 
 [taxonomies]
     tag = "tags"

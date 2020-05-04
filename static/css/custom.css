@@ -28,6 +28,10 @@ nav img {
     background-color: white;
 }
 
+.card-image{
+    max-height: 10%;
+}
+
 @media only screen and (max-width: 992px) {
     .brand-logo-text {
         display: none;

@@ -9,11 +9,11 @@
     <script src="https://kit.fontawesome.com/896818822e.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      {{ partial "header.html" }}
+      {{ partial "header.html" . }}
       {{ block "main" .}}
 
       {{ end }}
-      {{ partial "footer.html" }}
+      {{ partial "footer.html" . }}
   </body>
 
   <script src="/js/jquery.js"></script>
