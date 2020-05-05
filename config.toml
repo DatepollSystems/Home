@@ -1,14 +1,27 @@
-baseURL = "http://datepoll.org/"
-languageCode = "en-us"
+baseURL = "http://datepoll.org/en"
 title = "Datepoll Home"
+description = "Datepoll.org is a Open-Source project to manage club/organisation related stuff."
+DefaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    baseURL = "http://datepoll.org/en"
+    title = "Datepoll Home"
+    weight = 1
+    staticDir = "static"
+  [languages.de]
+    baseURL = "http://datepoll.org/de"
+    title = "Datepoll Webseite"
+    weight = 2
+    staticDir = "static"
 
 [menus]
-  [[menu.main]]
-    identifier = "blog"
-    name = "This is the blog section"
-    title = "Blog"
-    url = "/blog/"
-    weight = -110
+      [[menu.main]]
+        identifier = "blog"
+        name = "This is the blog section"
+        title = "Blog"
+        url = "/blog/"
+        weight = -110
 
 [markup]
   defaultMarkdownHandler = "blackfriday"

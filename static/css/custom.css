@@ -18,8 +18,14 @@ nav img {
     text-align: right;
 }
 
-.text-right { 
-    text-align: right;
+.truncate * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: "...";
+}
+
+.right {
+    float: right;
 }
 
 .brand-logo {
@@ -28,11 +34,25 @@ nav img {
     background-color: white;
 }
 
-.card-image{
-    max-height: 10%;
+.card-image {
+    width:100%;max-height:300px;overflow:hidden;
+}
+
+.card-image img{
+    width:100%;
 }
 
 @media only screen and (max-width: 992px) {
+
+    .card-image {
+        width:100%;max-height:200px;overflow:hidden;
+    }
+
+    .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .brand-logo-text {
         display: none;
     }
@@ -49,5 +69,9 @@ nav img {
 }
 
 .container {
+    width: 100%;
+}
+
+.img {
     width: 100%;
 }

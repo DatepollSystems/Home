@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <title>{{ .Site.Title }}</title>
     
-    <link rel="stylesheet" href="/css/materialize.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="shortcut icon" type="image/svg" href='{{ "images/icon.svg" | absLangURL }}'>
+    <link rel="stylesheet" href='{{ "css/materialize.css" | absLangURL }}'>
+    <link rel="stylesheet" href='{{ "css/custom.css" | absLangURL }}'>
     <script src="https://kit.fontawesome.com/896818822e.js" crossorigin="anonymous"></script>
   </head>
   <body>
       {{ partial "header.html" . }}
-      {{ block "main" .}}
+      {{ block "main" . }}
 
       {{ end }}
       {{ partial "footer.html" . }}
   </body>
 
-  <script src="/js/jquery.js"></script>
-  <script src="/js/materialize.js"></script>
+  <script src='{{ "js/jquery.js" | absLangURL }}'></script>
+  <script src='{{ "js/materialize.js" | absLangURL }}'></script>
   <script>
     $(document).ready(function(){
       $('.sidenav').sidenav();
