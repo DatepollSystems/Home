@@ -22,6 +22,11 @@ DefaultContentLanguage = "en"
         title = "Blog"
         url = "/blog/"
         weight = -110
+      [[menu.main]]
+        identifier = "documentation"
+        name = "Documentation of the Datepoll Project"
+        title = "Documentation"
+        url = "https://docs.datepoll.org"
 
 [markup]
   defaultMarkdownHandler = "blackfriday"

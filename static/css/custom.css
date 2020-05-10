@@ -8,10 +8,12 @@ nav *{
     background-color: white;
 }
 
-nav img {
-    height: auto;
-    vertical-align: middle;
-    
+.blog-img {
+    width: 100%;
+}
+
+.card-text {
+    margin: 0;
 }
 
 .text-right * { 
@@ -28,18 +30,56 @@ nav img {
     float: right;
 }
 
+.left {
+    float: left;
+}
 .brand-logo {
-    margin-left: 10px;
     color: #607d8b !important;
     background-color: white;
+    margin-left: 10px;
+    -webkit-box-align:center !important;
+    -webkit-box-pack:center !important;
+    display:-webkit-box !important;
+}
+
+.brand-logo img {
+    float: left;
+    margin: 0;
+    
+}
+
+.brand-logo-text {
+    margin-left: 10px;
+}
+
+.card-action {
+    height: 58px;
 }
 
 .card-image {
-    width:100%;max-height:300px;overflow:hidden;
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
 }
 
 .card-image img{
-    width:100%;
+    width: 100%;
+}
+
+p {
+    font-size: 2;
+}
+
+.blog-image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.blog-image img{
+    width: 100%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -53,8 +93,20 @@ nav img {
         padding-right: 10px;
     }
 
+    .brand-logo {
+        margin: 0;
+        margin-top: 8px;
+        
+    }
+
     .brand-logo-text {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    .brand-logo {
+       margin-top: 4px;
     }
 }
 
