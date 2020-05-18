@@ -5,9 +5,9 @@
     <title>{{ .Site.Title }}</title>
     {{ $customCSS := "css/custom.css" }}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/svg" href='{{ "images/icon.svg" | absLangURL }}' crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href='{{ "css/materialize.css" | absLangURL }}' crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href='{{ $customCSS | absLangURL }}' crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/svg" href='{{ "images/icon.svg" | relLangURL }}' crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href='{{ "css/materialize.css" | relLangURL }}' crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href='{{ $customCSS | relLangURL }}' crossorigin="anonymous">
     <script type="text/javascript" src="https://kit.fontawesome.com/896818822e.js" crossorigin="anonymous"></script>
   <body>
       {{ partial "header.html" . }}
@@ -17,8 +17,8 @@
       {{ partial "footer.html" . }}
   </body>
 
-  <script src='{{ "js/jquery.js" | absLangURL }}' type="text/javascript" crossorigin="anonymous"></script>
-  <script src='{{ "js/materialize.js" | absLangURL }}' type="text/javascript" crossorigin="anonymous"></script>
+  <script src='{{ "js/jquery.js" | relLangURL }}' type="text/javascript" crossorigin="anonymous"></script>
+  <script src='{{ "js/materialize.js" | relLangURL }}' type="text/javascript" crossorigin="anonymous"></script>
   <script type="text/javascript">
     $(document).ready(function(){
       $('.sidenav').sidenav();
