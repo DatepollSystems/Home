@@ -6,9 +6,9 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/svg" href='{{ "images/icon.svg" | absLangURL }}'>
-    <link rel="stylesheet" href='{{ "css/materialize.css" | absLangURL }}'>
-    <link rel="stylesheet" href='{{ "css/custom.css" | absLangURL }}'>
-    <script src="https://kit.fontawesome.com/896818822e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href='{{ "css/materialize.css" | absLangURL }}'>
+    <link rel="stylesheet" type="text/css" href='{{ "css/custom.css" | absLangURL }}'>
+    <script type="text/javascript" src="https://kit.fontawesome.com/896818822e.js" crossorigin="anonymous"></script>
   </head>
   <body>
       {{ partial "header.html" . }}
@@ -18,9 +18,9 @@
       {{ partial "footer.html" . }}
   </body>
 
-  <script src='{{ "js/jquery.js" | absLangURL }}'></script>
-  <script src='{{ "js/materialize.js" | absLangURL }}'></script>
-  <script>
+  <script src='{{ "js/jquery.js" | absLangURL }}' type="text/javascript"></script>
+  <script src='{{ "js/materialize.js" | absLangURL }}' type="text/javascript"></script>
+  <script type="text/javascript">
     $(document).ready(function(){
       $('.sidenav').sidenav();
     });
