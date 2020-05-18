@@ -3,6 +3,10 @@ nav *{
     background-color: white;
 }
 
+p {
+    font-size: 20px;
+}
+
 .hide-on-med-and-down li a {
     color: #607d8b;
     background-color: white;
@@ -18,12 +22,6 @@ nav *{
 
 .text-right * { 
     text-align: right;
-}
-
-.truncate * {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: "...";
 }
 
 .right {
@@ -82,6 +80,33 @@ p {
     width: 100%;
 }
 
+.heading {
+    color: #ffffff ;
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+.heading-row {
+    background-color: #607d8b;
+}
+
+.container {
+    width: 100%;
+}
+
+.img {
+    width: 90%;
+}
+
+.t {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  border: 2px dashed #f69c55;
+}
+
 @media only screen and (max-width: 992px) {
 
     .card-image {
@@ -102,6 +127,19 @@ p {
     .brand-logo-text {
         display: none;
     }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+
+    .img {
+        width: 115% !important;
+        margin-left: -13%;
+    }
 }
 
 @media only screen and (max-width: 595px) {
@@ -110,20 +148,3 @@ p {
     }
 }
 
-.heading {
-    color: #ffffff ;
-    text-align: center;
-    padding: 60px 0 60px 0;
-}
-
-.heading-row {
-    background-color: #607d8b;
-}
-
-.container {
-    width: 100%;
-}
-
-.img {
-    width: 100%;
-}
