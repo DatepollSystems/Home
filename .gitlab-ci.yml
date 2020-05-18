@@ -9,19 +9,10 @@ test:
   except:
   - master
 
-pages:
-  script:
-  - hugo
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
-
 deploy:
   stage: deploy
   only:
-    - development
+    - master
   script:
     - hugo
     - eval "$(ssh-agent -s)"
