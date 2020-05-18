@@ -22,5 +22,4 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo -e “Host *\n\StrictHostKeyChecking no\n\n” > ~/.ssh/config
     - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./public/* $SSH_USERNAME@$SSH_HOST:/var/www/datepoll-docs > /dev/null
