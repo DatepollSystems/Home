@@ -5,11 +5,9 @@ draft: false
 image: "/de/images/coding.jpg"
 ---
 
-Liebe Vereinsvorstände, Vereinsmitglieder und Open-Source Community,
+Liebe Vereinsvorstände, Vereinsmitglieder und Open-Source Community, Jeder der versucht einen Verein zu leiten wird die allfälligen Probleme welche damit einhergehen kennen.
 
-Jeder der versucht einen Verein zu leiten wird die allfälligen Probleme welche damit einhergehen kennen.
-
-- Menschen
+##### --- Menschen ---
 
 DatePoll versucht all jene Probleme (oder zumindest die größten) zu beheben / verbessern welche mit der Verwaltung der Mitglieder entstehen. 
 
