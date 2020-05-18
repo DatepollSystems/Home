@@ -5,12 +5,12 @@ DefaultContentLanguage = "en"
 
 [languages]
   [languages.en]
-    baseURL = "http://datepoll.org/en"
+    baseURL = "https://datepoll.org/en"
     title = "Datepoll Home"
     weight = 1
     staticDir = "static"
   [languages.de]
-    baseURL = "http://datepoll.org/de"
+    baseURL = "https://datepoll.org/de"
     title = "Datepoll Webseite"
     weight = 2
     staticDir = "static"
