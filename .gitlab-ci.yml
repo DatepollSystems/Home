@@ -9,6 +9,9 @@ test:
   except:
   - master
 
+before_script:
+  - apk update && apk add openssh
+
 deploy:
   stage: deploy
   only:
