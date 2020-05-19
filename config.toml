@@ -1,4 +1,4 @@
-baseURL = "https://datepoll.org/en"
+baseURL = "https://datepoll.org/"
 title = "Datepoll Home"
 description = "Datepoll.org is a Open-Source project to manage club/organisation related stuff."
 DefaultContentLanguage = "en"
