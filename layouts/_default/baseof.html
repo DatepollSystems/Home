@@ -29,6 +29,8 @@
           isMobile = true;
       }
 
+      $('.sidenav').sidenav();
+      
       if(!isMobile){
         var icons = $('.main-icon');
 
@@ -37,8 +39,6 @@
             $(this).css('line-height', height + "px");
             console.log("moved icon")
         });
-  
-        $('.sidenav').sidenav();
       }
     });
   </script>
