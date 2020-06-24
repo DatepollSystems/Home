@@ -1,5 +1,5 @@
 ---
-title: "Datepoll Home"
+title: "DatePoll Home"
 date: 2020-05-05T18:25:50+02:00
 draft: false
 ---
@@ -7,7 +7,7 @@ draft: false
     <div class="row">
             <div class="col l12">
                 <h1>Club managing wasn't that easy before!</h1>
-                <p>Datepoll is a club managing software to support especially voluntary clubs by automating standard processes of an organization. Birthdays of club members, event managing and an integrated club calendar will give your members an easy opportunity to leave crowded chat messaging groups behind. </p>
+                <p>DatePoll is a club managing software to support especially voluntary clubs by automating standard processes of an organization. Birthdays of club members, event managing and an integrated club calendar will give your members an easy opportunity to leave crowded chat messaging groups behind. </p>
             </div>
         </div>
         
@@ -50,7 +50,7 @@ draft: false
         <h2>
             Supported devices.
         </h2>
-        <p>Datepoll runs on every devices which has a browser. Nevertheless we have also developed an android app to give the user a more fluent experience.</p>
+        <p>DatePoll runs on every devices which has a browser. Nevertheless we have also developed an android app to give the user a more fluent experience.</p>
         </div>
     </div>
     <br>

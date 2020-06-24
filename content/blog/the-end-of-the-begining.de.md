@@ -18,6 +18,7 @@ DatePoll ist eine Vereinsmanagement-Software. Wer sich unter den Wörtern jetzt 
 **Problemstellung:** Mitgliederdaten sind oft veraltet, nicht vollständig oder schlichtweg falsch.
 
 **Unsere Lösung:** Man gibt Mitgliedern die Möglichkeit ihre eigenen Daten zu erfassen und zu ändern.
+
 **Ergebnis:** Jedes Vorstandsmitglied hat jederzeit die aktuellste Version der Daten am kleinen Finger.
 
 2) DatePoll ist ein Terminplaner.

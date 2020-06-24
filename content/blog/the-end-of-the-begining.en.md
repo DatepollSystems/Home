@@ -20,6 +20,7 @@ DatePoll is a club management software. Who don't know those words, can be reass
 **Problem:**Member data is often outdated, not complete or wrong.
 
 **Our solution:** You give members the possibility to enter and adjust their own data.
+
 **Result:** Every board member has the latest version of their user data anytime and everywhere.
 
 2) DatePoll is an appointment planner.
