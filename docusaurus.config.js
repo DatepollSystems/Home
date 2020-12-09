@@ -1,18 +1,18 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'DatePoll Systems',
+  tagline: 'Digitalizing procedures in various application areas',
+  url: 'https://datepoll.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logos/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'DatePoll Systems', // Usually your GitHub org/user name.
+  projectName: 'DatePoll-Home', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'DatePoll',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'DatePoll Logo',
         src: 'img/logos/datepoll.svg',
       },
       items: [
@@ -22,10 +22,10 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://gitlab.com/DatePoll',
+          label: 'GitLab',
           position: 'right',
         },
       ],
@@ -37,12 +37,12 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
+              label: 'Home',
               to: 'docs/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'DatePoll',
+              to: 'docs/DatePoll/index',
             },
           ],
         },
@@ -50,16 +50,12 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: '#',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: '#',
             },
           ],
         },
@@ -71,13 +67,13 @@ module.exports = {
               to: 'blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'GitLab',
+              href: 'https://gitlab.com/DatePoll',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} DatePoll, Built with Docusaurus.`,
     },
   },
   presets: [
@@ -86,15 +82,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl: 'https://gitlab.com/DatePoll/DatePoll-Documentation/edit/master/docs',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          editUrl: 'https://gitlab.com/DatePoll/DatePoll-Documentation/edit/master/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
