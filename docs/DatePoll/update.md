@@ -4,8 +4,9 @@ title: Updating
 
 ## How to update
 
-!!! warning
-    This is the general update section! For version specific updates look at the version update sections.
+:::warning
+This is the general update section! For version specific updates look at the version update sections.
+:::
 
 1. Enter your datepoll-docker root directory.
 2. Execute this command to update your docker instance (sudo required) ``./scripts/dockerUpdate.sh``
@@ -14,8 +15,9 @@ title: Updating
 
 ## From version 0.8.2 to 0.8.3
 
-!!! info
-    There are no version specific changes in the update progress. Head to the [How to update](#how-to-update) section.
+:::info
+There are no version specific changes in the update progress. Head to the [How to update](#how-to-update) section.
+:::
 
 
 ### API Changes

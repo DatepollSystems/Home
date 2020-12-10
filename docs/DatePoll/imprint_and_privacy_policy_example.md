@@ -2,8 +2,9 @@
 title: Imprint and privacy policy example
 ---
 
-!!! info
-    You can use HTML in these two textboxes.
+:::info
+You can use HTML in these two textboxes.
+:::
 
 ## Imprint
 ```html

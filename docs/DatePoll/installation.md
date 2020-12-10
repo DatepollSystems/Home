@@ -2,8 +2,9 @@
 title: Installation
 ---
 
-!!! warning
-    While it is possible to use your operating system or webserver of choice, this installation guide uses [Debian](https://www.debian.org/) and [nginx](http://nginx.org/).
+:::warning
+While it is possible to use your operating system or webserver of choice, this installation guide uses [Debian](https://www.debian.org/) and [nginx](http://nginx.org/).
+:::
 
 
 ## Requirements
@@ -13,8 +14,10 @@ sudo apt install nginx
 ```
 [Let's Encrypt](https://letsencrypt.org/)
 
-!!! info
-    You can also use your own certificates! If you choose to, skip the next part!
+:::info
+You can also use your own certificates! If you choose to, skip the next part!
+:::
+
 ```
 sudo apt install certbot
 ```
@@ -161,15 +164,17 @@ Now reload your nginx server. `sudo nginx -s reload`
 1.  Install the frontend (Please make sure you stay in the root directory of the project) `./scripts/frontend.sh`
 1.  Install the backend `./scripts/installBackend.sh`
 
-!!! info
-    During the backend installation you should choose to add an admin user (for the first login and to configure DatePoll further).
+:::info
+During the backend installation you should choose to add an admin user (for the first login and to configure DatePoll further).
 
-    The username and password will be printed to the terminal.
+The username and password will be printed to the terminal.
+:::
 
 ## Verification
 Visit your domain `https://datepoll.server.com` and you should see the login page! 
 
-!!! note "First steps"
-    After logging in with your newly created admin user head to the DatePoll configuration, there you can configure features, welcome messages, the imprint and many more settings.
+:::note First steps
+After logging in with your newly created admin user head to the DatePoll configuration, there you can configure features, welcome messages, the imprint and many more settings.
 
-    Take a look [here](./imprint_and_privacy_policy_example.md) for an imprint and a privacy policy example text.
+Take a look [here](./imprint_and_privacy_policy_example.md) for an imprint and a privacy policy example text.
+:::
