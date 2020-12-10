@@ -6,9 +6,15 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logos/favicon.ico',
-  organizationName: 'DatePoll Systems', // Usually your GitHub org/user name.
-  projectName: 'DatePoll-Home', // Usually your repo name.
+  organizationName: 'DatePoll Systems',
+  projectName: 'DatePoll-Home',
   themeConfig: {
+    colorMode: {
+      //disable light/darkmode switch
+      defaultMode: 'light',
+      disableSwitch: true
+    },
+    image: 'img/logos/datepoll.png',  //matatag image (link preview on fb, twitter, ...)
     navbar: {
       title: 'DatePoll',
       logo: {
@@ -16,19 +22,21 @@ module.exports = {
         src: 'img/logos/datepoll.svg',
       },
       items: [
+        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '\/$'},
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Projects',
           position: 'left',
+          to: '/',
+          activeBaseRegex: '^\/(datepoll)$',   //show as active only when url in list
+          items: [
+            { to: '/datepoll', label: 'DatePoll' }
+          ]
         },
-        { to: 'blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://gitlab.com/DatePoll',
-          label: 'GitLab',
-          position: 'right',
-        },
+        { to: 'blog/', label: 'Blog', position: 'right' },
+        { to: 'docs/', label: 'Documentation', position: 'right' },
+        { href: 'https://gitlab.com/DatePoll', label: 'GitLab', position: 'right', className: 'button button--primary' },
       ],
+      hideOnScroll: true,
     },
     footer: {
       style: 'dark',
