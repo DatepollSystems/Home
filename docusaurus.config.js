@@ -22,7 +22,7 @@ module.exports = {
         src: 'img/logos/datepoll.svg',
       },
       items: [
-        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '\/$'},
+        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^\/$'},
         {
           label: 'Projects',
           position: 'left',
