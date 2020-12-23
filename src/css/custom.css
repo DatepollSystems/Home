@@ -15,10 +15,15 @@
   --ifm-color-primary-dark:#56707d;
   --ifm-color-primary-darker: #526a76;
   --ifm-color-primary-darkest: #435861;
-  
-  
- 
   --ifm-code-font-size: 95%;
+}
+
+.footer--dark{
+  --ifm-footer-background-color: var(--ifm-color-primary-darkest);
+}
+
+.button {
+  color: var(--ifm-button-color);
 }
 
 .docusaurus-highlight-code-line {

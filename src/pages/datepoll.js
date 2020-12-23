@@ -51,35 +51,26 @@ function Home() {
     <Layout
       title="DatePoll"
       description="Club managing wasn't that easy before!">
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">DatePoll</h1>
-          <p className="hero__subtitle">Manage your Club</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get it
-            </Link>
-          </div>
-        </div>
-      </header>
       <main>
         <div className="container">
-          <div className="row margin-vert--xl">
+          <div className="row margin-vert--lg">
             <div className={clsx("col", "col--6", styles.verticalContainer)} >
               <div className={styles.verticalCenter}>
+                <h1 className="hero__title">DatePoll</h1>
+                <p className="hero__subtitle">Manage your Club</p>
                 <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
                   voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-              </p>
+                </p>
+                <Link
+                  className="button button--primary button--lg"
+                  to={useBaseUrl('docs/')}>
+                  Get it
+                </Link>
               </div>
             </div>
             <div className="col col--6 text--center" >
-              <img src="img/team_spirit.svg" style={{maxHeight: '400px'}}></img>
+              <img src="img/team_spirit.svg" style={{ maxHeight: '400px' }}></img>
             </div>
           </div>
         </div>
