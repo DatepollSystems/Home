@@ -22,14 +22,13 @@ module.exports = {
         src: 'img/logos/datepoll.svg',
       },
       items: [
-        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^\/$'},
+        { to: '/', label: 'Home', position: 'left', activeBaseRegex: '^\/$' },
         {
           label: 'Projects',
           position: 'left',
-          to: '/',
-          activeBaseRegex: '^\/(datepoll)$',   //show as active only when url in list
           items: [
-            { to: '/datepoll', label: 'DatePoll' }
+            { to: '/projects', label: 'Overview', activeBaseRegex: '^\/projects$'},
+            { to: '/projects/datepoll', label: 'DatePoll' }
           ]
         },
         { to: 'blog/', label: 'Blog', position: 'right' },
