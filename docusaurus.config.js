@@ -77,6 +77,10 @@ module.exports = {
               label: 'GitLab',
               href: 'https://gitlab.com/DatePoll',
             },
+            {
+              label: 'Releases',
+              href: 'https://releases.datepoll.org/'
+            }
           ],
         },
       ],
