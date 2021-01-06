@@ -6,6 +6,8 @@ module.exports = {
       'DatePoll/screenshots',
       'DatePoll/installation',
       'DatePoll/update',
+      'DatePoll/devAndBuilding',
+      'DatePoll/translations',
       'DatePoll/imprint_and_privacy_policy_example',
       'DatePoll/permissions',
       {
