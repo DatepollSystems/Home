@@ -4,18 +4,30 @@ title: Updating
 
 ## How to update
 
-:::warning
+:::info
 This is the general update section! For version specific updates look at the version update sections.
 :::
 
-1. Enter your datepoll-docker root directory.
-2. Execute this command to update your docker instance (sudo required) ``./scripts/dockerUpdate.sh``
-3. Execute this command to update your frontend ``./scripts/frontend.sh``
-4. Execute this command to update your backend ``./scripts/backendUpdate.sh``
+1. Enter your datepoll-docker root directory and set all scripts executable.
+   ```
+   chmod +x ./scripts/*
+   ```
+1. Execute this command to update your docker instance (sudo required) 
+   ```
+   ./scripts/dockerUpdate.sh
+   ```
+1. Execute this command to update your frontend
+   ```
+   ./scripts/frontend.sh
+   ```
+1. Execute this command to update your backend
+   ```
+   ./scripts/backendUpdate.sh
+   ```
 
 ## From version 0.8.2 to 0.8.3
 
-:::info
+:::note
 There are no version specific changes in the update progress. Head to the [How to update](#how-to-update) section.
 :::
 
