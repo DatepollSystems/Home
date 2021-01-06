@@ -58,11 +58,11 @@ module.exports = {
           items: [
             {
               label: 'Discord',
-              href: '#',
+              href: 'https://discord.gg/Tc5kAH5zhH',
             },
             {
-              label: 'Twitter',
-              href: '#',
+              label: 'Mastodon',
+              href: 'https://voi.social/@DatePoll',
             },
           ],
         },
@@ -93,11 +93,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://gitlab.com/DatePoll/DatePoll-Documentation/edit/master/docs',
+          editUrl: 'https://gitlab.com/DatePoll/DatePoll-Home/edit/master/docs',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://gitlab.com/DatePoll/DatePoll-Documentation/edit/master/blog',
+          editUrl: 'https://gitlab.com/DatePoll/DatePoll-Home/edit/master/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
