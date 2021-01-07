@@ -2,8 +2,8 @@
 title: Home
 ---
 
-# Welcome to the DatePoll API documentation
-
+## Welcome to the DatePoll API documentation
+---
 ## Check if DatePoll is running
 **URL**: `/`
 
