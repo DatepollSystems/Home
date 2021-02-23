@@ -1,4 +1,5 @@
 /* stylelint-disable docusaurus/copyright-header */
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -6,24 +7,31 @@
  */
 
 /* You can override the default Infima variables here. */
+
 :root {
-  /* look here dor shades: https://v2.docusaurus.io/docs/2.0.0-alpha.70/styling-layout#styling-your-site-with-infima */
-  --ifm-color-primary-lightest:#869fab;
+  /* look here for shades: https://v2.docusaurus.io/docs/styling-layout#styling-your-site-with-infima */
+  --ifm-color-primary-lightest: #869fab;
   --ifm-color-primary-lighter: #718f9d;
-  --ifm-color-primary-light:#6a8998;
+  --ifm-color-primary-light: #6a8998;
   --ifm-color-primary: #607d8b;
-  --ifm-color-primary-dark:#56707d;
+  --ifm-color-primary-dark: #56707d;
   --ifm-color-primary-darker: #526a76;
   --ifm-color-primary-darkest: #435861;
   --ifm-code-font-size: 95%;
 }
 
-.footer--dark{
+.footer--dark {
   --ifm-footer-background-color: var(--ifm-color-primary-darkest);
 }
 
-.button {
-  color: var(--ifm-button-color);
+.header-gitlab-link {
+  color: white;
+  margin: 0 var(--ifm-navbar-item-padding-horizontal);
+}
+
+.header-gitlab-link:hover {
+  color: black;
+  opacity: 0.8;
 }
 
 .docusaurus-highlight-code-line {

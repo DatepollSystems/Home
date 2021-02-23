@@ -23,3 +23,22 @@
   align-items: center;
   justify-content: center;
 }
+
+.center {
+  text-align: center;
+}
+
+.gitlab_icon {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 0.5rem;
+  fill: black;
+}
+
+html[data-theme='dark'] .gitlab_icon {
+  fill: white;
+}
+
+html[data-theme='dark'] .gitlab_icon_container:hover .gitlab_icon{
+  fill: black;
+}

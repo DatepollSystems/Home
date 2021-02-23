@@ -12,7 +12,7 @@ module.exports = {
     colorMode: {
       //disable light/darkmode switch
       defaultMode: 'light',
-      disableSwitch: true
+      disableSwitch: false
     },
     image: 'img/logos/datepoll.png',  //matatag image (link preview on fb, twitter, ...)
     navbar: {
@@ -27,13 +27,12 @@ module.exports = {
           label: 'Projects',
           position: 'left',
           items: [
-            { to: '/projects', label: 'Overview', activeBaseRegex: '^\/projects$'},
             { to: '/projects/datepoll', label: 'DatePoll' }
           ]
         },
         { to: 'blog/', label: 'Blog', position: 'right' },
         { to: 'docs/', label: 'Documentation', position: 'right' },
-        { href: 'https://gitlab.com/DatePoll', label: 'GitLab', position: 'right', className: 'button button--primary' },
+        { href: 'https://gitlab.com/DatePoll', label: 'GitLab', position: 'right', className: 'button button--primary header-gitlab-link' },
       ],
       hideOnScroll: true,
     },

@@ -1,8 +1,7 @@
 import React from 'react';
-import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import styles from './index.module.css';
-import projects from '../../modules/Projects/Projects'
+import styles from './ProjectList.module.css';
+import projects from './Projects'
 
 function Project({ title, shortDescription, logoUrl, link }) {
   return (
@@ -37,21 +36,17 @@ function Project({ title, shortDescription, logoUrl, link }) {
 
 function ProjectList() {
   return (
-    <Layout
-      title="Projects"
-      description="DatePoll Systems project overview">
-      <main className="container margin-vert--lg">
-        {projects && Object.keys(projects).length > 0 && (
-          <div className="row">
-            {Object.keys(projects).map((name, idx) => (
-              <div className="col col--4 margin-bottom--lg">
-                <Project key={idx} {...projects[name]} />
-              </div>
-            ))}
-          </div>
-        )}
-      </main >
-    </Layout >
+    <>
+      {projects && Object.keys(projects).length > 0 && (
+        <div className="row">
+          {Object.keys(projects).map((name, idx) => (
+            <div className="col col--4 margin-bottom--lg">
+              <Project key={idx} {...projects[name]} />
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
