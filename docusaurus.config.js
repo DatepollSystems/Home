@@ -10,7 +10,6 @@ module.exports = {
   projectName: 'DatePoll-Home',
   themeConfig: {
     colorMode: {
-      //disable light/darkmode switch
       defaultMode: 'light',
       disableSwitch: false
     },
