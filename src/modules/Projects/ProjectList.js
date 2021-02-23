@@ -7,7 +7,7 @@ function Project({ title, shortDescription, logoUrl, link }) {
   return (
     <div className="card text--center">
       {logoUrl && (
-        <div class="card__image padding-top--md">
+        <div className="card__image padding-top--md">
           <img
             src={logoUrl}
             alt={`${title} logo`}
@@ -16,13 +16,13 @@ function Project({ title, shortDescription, logoUrl, link }) {
           />
         </div>
       )}
-      <div class="card__body">
+      <div className="card__body">
         <h3>{title}</h3>
         <small>
           {shortDescription}
         </small>
       </div>
-      <div class="card__footer">
+      <div className="card__footer">
         <Link
           className="button button--primary"
           to={link}>

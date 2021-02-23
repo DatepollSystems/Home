@@ -4,7 +4,6 @@ import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import ProjectList from '../modules/Projects/ProjectList';
 
 
@@ -23,7 +22,7 @@ function Home() {
             <Link
               className={clsx('button button--outline button--secondary button--lg', styles.gitlab_icon_container)}
               href="https://gitlab.com/DatePoll">
-              <svg viewBox="120 120 340 345" width="24" height="24" class={styles.gitlab_icon}>
+              <svg viewBox="120 120 340 345" width="24" height="24" className={styles.gitlab_icon}>
                 <path d="M461.514,298.355l-18.049-55.587c0.008,0.025,0.011,0.051,0.019,0.076c-0.009-0.029-0.014-0.058-0.022-0.087
 		c-0.001-0.002-0.001-0.003-0.001-0.005c0-0.001,0-0.002,0-0.002l-35.83-110.31c-1.96-5.811-7.353-9.711-13.536-9.663
 		c-6.201,0.032-11.446,3.857-13.364,9.748L346.721,237.23H239.408l-34.074-104.712c-1.916-5.886-7.162-9.71-13.362-9.742
@@ -70,7 +69,7 @@ function Home() {
         </div>
       </header >
       <main className="container margin-vert--lg">
-        <h2 class={clsx('hero__title', styles.center)}>Projects</h2>
+        <h2 className={clsx('hero__title', styles.center)}>Projects</h2>
         <ProjectList></ProjectList>
       </main>
     </Layout >
