@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.heroBanner * {
+  color: white !important;
+}
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
@@ -32,13 +36,5 @@
   display: inline-block;
   vertical-align: text-bottom;
   margin-right: 0.5rem;
-  fill: black;
-}
-
-html[data-theme='dark'] .gitlab_icon {
   fill: white;
-}
-
-html[data-theme='dark'] .gitlab_icon_container:hover .gitlab_icon{
-  fill: black;
 }
