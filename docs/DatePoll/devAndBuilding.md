@@ -143,7 +143,7 @@ Because it's sometimes really painful to monitor or read log files out of contai
 ---
 # Building
 ## Frontend
-Builds are managed with the [`.gitlab-ci.yml`](https://gitlab.com/DatePoll/DatePoll/datePoll-backend-php/-/blob/master/.gitlab-ci.yml)
+Builds are managed with the [`.gitlab-ci.yml`](https://gitlab.com/DatePoll/DatePoll/datePoll-frontend/-/blob/master/.gitlab-ci.yml)
 
 ### Production 
 Production releases are builded if a commits happen on the `master` branch. The builds are accessible on 
@@ -170,7 +170,7 @@ On a **working** DatePoll setup you can update your frontend with this command:
 
 ### Manual
 :::note
-Make sure that all language files have been generated. [Read more here](./devAndBuilding#setup).
+Make sure that all language files have been generated. [Read more here](./translations.md).
 :::
 ```
 ng build --prod
