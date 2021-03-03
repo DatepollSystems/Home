@@ -31,6 +31,7 @@ This command generates static content into the `build` directory and can be serv
 
 ### Adding docs
 To add a new doc you have to add the file into the docs folder and make an entry in the sidebars.js for the navigation
+Available markdown features see https://v2.docusaurus.io/docs/markdown-features
 
 ### Adding new projects
 To add a new Project following steps must be done
@@ -49,3 +50,9 @@ To add a new Project following steps must be done
 ```
 3. add Link to just created page in `docusaurus.config.js` under `themeConfig.navbar.items[label=projects].items`
 4. create documentation folder `/docs/ProjectName/` and follow adding docs instructions
+
+### Adding blogposts
+To add a new blogpost a file within the blog directory must be created (name should be in the format `YYY-MMM-DD-blog-post-title.md`)
+The only required field in the header is `title` (other available headers see https://v2.docusaurus.io/docs/blog#header-options)
+
+`<!--truncate-->` can be used to define the content (anything above it) of the summary shown on the bloglist page
