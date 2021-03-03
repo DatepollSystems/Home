@@ -10,7 +10,7 @@ into the following languages:
 1. French
 1. Italian
 
-However there is a possibility to overwrite auto generated translations.
+However it is possible to overwrite auto generated translations.
 
 :::warning Please read
 **Everything written below is only neceassary if you want to create a production build or to work on translations.**
