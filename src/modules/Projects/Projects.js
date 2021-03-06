@@ -40,6 +40,40 @@ const projects = {
                 ),
             }
         ]
+    },
+    Wlm: {
+        title: 'Water-Level-Monitor',
+        subTitle: 'Measure the level of rivers and lakes!',
+        shortDescription: 'Automatic water level measurement.',
+        logoUrl: '/img/logos/wlm.png',
+        link: '/projects/wlm',
+        imageUrl: '/img/logos/wlm.png',
+        getStartedLink: '/docs/WaterLevelMonitor/index',
+        description: (
+            <>
+                Water-Level-Monitor is a software system to handle automatic water level tracking and show the data in human readable stats.
+            </>
+        ),
+        features: [
+
+        ]
+    },
+    LocalSIF: {
+        title: 'LocalSIF',
+        subTitle: 'LocalSIF is a local file share software system, mainly to share data between your phone and you PC.',
+        shortDescription: 'LocalSIF is a local file share software system.',
+        logoUrl: '/img/logos/localsif.svg',
+        link: '/projects/wlm',
+        imageUrl: '/img/team_spirit.svg',
+        getStartedLink: '/docs/WaterLevelMonitor/index',
+        description: (
+            <>
+                Water-Level-Monitor is a software system to handle automatic water level tracking and show the data in human readable stats.
+            </>
+        ),
+        features: [
+
+        ]
     }
 };
 
