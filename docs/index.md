@@ -1,9 +1,7 @@
 ---
 slug: /
-title: Home
+title: Welcome to DatePoll-Documentation
 ---
-
-# Welcome to DatePoll-Documentation
 
 ## Welcome
 DatePoll is a passionate project of young developers. It's changing nearly every day, have fun!
