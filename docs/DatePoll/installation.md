@@ -83,8 +83,7 @@ sudo apt install certbot
      listen 443 ssl http2;
      # Change domain
      server_name <YOUR_DATEPOLL_DOMAIN>;
-   
-     ssl on;
+
      # Change domain
      ssl_certificate /etc/letsencrypt/live/<YOUR_DATEPOLL_DOMAIN>/fullchain.pem;
      ssl_certificate_key /etc/letsencrypt/live/<YOUR_DATEPOLL_DOMAIN>/privkey.pem;
@@ -132,11 +131,10 @@ sudo apt install certbot
    }
    
    server {
-     listen 9230;
+     listen 9230 ssl http2;
      # Change domain
      server_name <YOUR_DATEPOLL_DOMAIN>;
-    
-     ssl on;
+
      # Change domain
      ssl_certificate /etc/letsencrypt/live/<YOUR_DATEPOLL_DOMAIN>/fullchain.pem;
      ssl_certificate_key /etc/letsencrypt/live/<YOUR_DATEPOLL_DOMAIN>/privkey.pem;
