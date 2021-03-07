@@ -21,13 +21,13 @@ deploy-dev:
     - develop
 
 deploy-prod:
-    stage: deploy
-    script:
+  stage: deploy
+  script:
     - eval "$(ssh-agent -s)"
-      - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-      - mkdir -p ~/.ssh
-      - chmod 700 ~/.ssh
-      - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll/*"
-      - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll/ > /dev/null
-    only:
-      - main
+    - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll/*"
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll/ > /dev/null
+  only:
+    - main
