@@ -1,10 +1,24 @@
 image: node:latest
-pages:
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+  - apk update && apk add openssh
+
+deploy:
     stage: deploy
     script:
       - yarn install
       - yarn run build
       - mv build public
+      - eval "$(ssh-agent -s)"
+      - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+      - mkdir -p ~/.ssh
+      - chmod 700 ~/.ssh
+      - ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST -p $SSH_PORT "rm -rf /var/www/datepoll/*"
+      - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./public/* $SSH_USERNAME@$SSH_HOST:/var/www/datepoll > /dev/null
+
     artifacts:
         paths:
           - public
