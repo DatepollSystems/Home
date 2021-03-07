@@ -12,8 +12,8 @@ build:
   script:
     - yarn install
     - yarn run build
-    - mv build public
-    
+    - cd build && ls -al
+
 deploy-dev:
   stage: deploy
   script:
@@ -22,10 +22,7 @@ deploy-dev:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll-dev/*"
-    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./public/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-dev/ > /dev/null
-  artifacts:
-    paths:
-      - public
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-dev/ > /dev/null
   only:
     - develop
 
@@ -37,9 +34,6 @@ deploy-prod:
       - mkdir -p ~/.ssh
       - chmod 700 ~/.ssh
       - ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST -p $SSH_PORT "rm -rf /var/www/datepoll/*"
-      - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./public/* $SSH_USERNAME@$SSH_HOST:/var/www/datepoll > /dev/null
-    artifacts:
-        paths:
-          - public
+      - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_USERNAME@$SSH_HOST:/var/www/datepoll > /dev/null
     only:
       - master
