@@ -6,19 +6,43 @@ variables:
 before_script:
   - apk update && apk add openssh
 
-deploy:
-    stage: deploy
+stages:
+  - build
+  - deploy-prod
+  - deploy-dev
+
+build:
+  stage: build
+  script:
+    - yarn install
+    - yarn run build
+    - mv build public
+
+
+deploy-dev:
+  stage: deploy-prod
+  script:
+    - eval "$(ssh-agent -s)"
+    - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll-dev/*"
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./public/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-dev/ > /dev/null
+  artifacts:
+    paths:
+      - public
+  only:
+    - develop
+
+deploy-prod:
+    stage: deploy-prod
     script:
-      - yarn install
-      - yarn run build
-      - mv build public
       - eval "$(ssh-agent -s)"
       - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
       - mkdir -p ~/.ssh
       - chmod 700 ~/.ssh
       - ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST -p $SSH_PORT "rm -rf /var/www/datepoll/*"
       - scp -P $SSH_PORT -o StrictHostKeyChecking=no -rp ./public/* $SSH_USERNAME@$SSH_HOST:/var/www/datepoll > /dev/null
-
     artifacts:
         paths:
           - public
