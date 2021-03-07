@@ -3,9 +3,6 @@ image: node:latest
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-before_script:
-  - apk update && apk add openssh
-
 stages:
   - build
   - deploy
@@ -16,8 +13,7 @@ build:
     - yarn install
     - yarn run build
     - mv build public
-
-
+    
 deploy-dev:
   stage: deploy
   script:
