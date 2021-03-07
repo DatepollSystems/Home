@@ -8,8 +8,7 @@ before_script:
 
 stages:
   - build
-  - deploy-prod
-  - deploy-dev
+  - deploy
 
 build:
   stage: build
@@ -20,7 +19,7 @@ build:
 
 
 deploy-dev:
-  stage: deploy-prod
+  stage: deploy
   script:
     - eval "$(ssh-agent -s)"
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
@@ -35,7 +34,7 @@ deploy-dev:
     - develop
 
 deploy-prod:
-    stage: deploy-prod
+    stage: deploy
     script:
       - eval "$(ssh-agent -s)"
       - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
