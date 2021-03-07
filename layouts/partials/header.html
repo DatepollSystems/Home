@@ -1,0 +1,21 @@
+<header>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="{{ .Site.BaseURL }}" class="brand-logo"><img src='{{ "images/icon.svg" | absLangURL }}'><span class="brand-logo-text">DatePoll</span></a>
+        <a href="{{ .Site.BaseURL }}" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+        <ul class="right hide-on-med-and-down">
+          {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}" title="{{ .Name }}">{{.Title}}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile-demo">
+    {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}" title="{{ .Name }}">{{.Title}}</a></li>
+    {{ end }}
+  </ul>
+</header>

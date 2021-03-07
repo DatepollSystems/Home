@@ -1,0 +1,36 @@
+baseURL = "https://datepoll.org/"
+title = "Datepoll Home"
+description = "Datepoll.org is a Open-Source project to manage club/organisation related stuff."
+DefaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    baseURL = "https://datepoll.org/en"
+    title = "Datepoll Home"
+    weight = 1
+    staticDir = "static"
+  [languages.de]
+    baseURL = "https://datepoll.org/de"
+    title = "Datepoll Webseite"
+    weight = 2
+    staticDir = "static"
+
+[menus]
+      [[menu.main]]
+        identifier = "blog"
+        name = "This is the blog section"
+        title = "Blog"
+        url = "/blog/"
+        weight = -110
+      [[menu.main]]
+        identifier = "documentation"
+        name = "Documentation of the Datepoll Project"
+        title = "Documentation"
+        url = "https://docs.datepoll.org"
+
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
