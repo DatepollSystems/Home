@@ -2,8 +2,14 @@ image: node:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  
+cache:
+  paths:
+    - node_modules/
 
 before_script:
+  - apt-get update -qq && apt-get install -y -qq zip
+  - rm ./package-lock.json
   - yarn install
   - yarn run build
   - ls -al
