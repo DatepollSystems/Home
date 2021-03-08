@@ -15,8 +15,12 @@ deploy-dev:
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
+    - echo "Deploying to dev environment"
     - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll-dev/*"
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-dev/ > /dev/null
+    - echo "Uploading dev release zip"
+    - zip -r DatePollSystems-Home-dev.zip ./build
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no ./DatePollSystems-Home-dev.zip $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
   only:
     - develop
 
