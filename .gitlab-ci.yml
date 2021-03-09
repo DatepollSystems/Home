@@ -2,20 +2,33 @@ image: node:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  
+
 cache:
   paths:
     - node_modules/
 
+stages:
+  - build
+  - deploy
+
 before_script:
   - apt-get update -qq && apt-get install -y -qq zip
   - rm ./package-lock.json
-  - yarn install
-  - yarn run build
-  - ls -al
+
+build:
+  stage: build
+  artifacts:
+    untracked: true
+  script:
+    - yarn install
+    - yarn run build
+    - ls -al
+
 
 deploy-dev:
   stage: deploy
+  dependencies:
+    - build
   script:
     - eval "$(ssh-agent -s)"
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
@@ -32,6 +45,8 @@ deploy-dev:
 
 deploy-prod:
   stage: deploy
+  dependencies:
+    - build
   script:
     - eval "$(ssh-agent -s)"
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
