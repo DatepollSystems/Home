@@ -9,31 +9,40 @@ cache:
 
 stages:
   - build
+  - initialize
   - deploy
 
-before_script:
-  - apt-get update -qq && apt-get install -y -qq zip
-  - rm ./package-lock.json
 
 build:
   stage: build
   artifacts:
     untracked: true
   script:
+    - rm ./package-lock.json
     - yarn install
     - yarn run build
     - ls -al
 
+initialize-ssh-git:
+  stage: initialize
+  artifacts:
+  untracked: true
+  only:
+    - develop
+    - main
+  script:
+    - apt-get update -qq && apt-get install -y -qq zip
+    - eval "$(ssh-agent -s)"
+    - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
 
 deploy-dev:
   stage: deploy
   dependencies:
     - build
+    - initialize
   script:
-    - eval "$(ssh-agent -s)"
-    - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
     - echo "Deploying to dev environment"
     - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll-dev/*"
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-dev/ > /dev/null
@@ -47,11 +56,8 @@ deploy-prod:
   stage: deploy
   dependencies:
     - build
+    - initialize
   script:
-    - eval "$(ssh-agent -s)"
-    - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
     - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll/*"
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll/ > /dev/null
   only:
