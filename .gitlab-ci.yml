@@ -9,9 +9,8 @@ cache:
 
 stages:
   - build
-  - initialize
+  - init-ssh-git
   - deploy
-
 
 build:
   stage: build
@@ -23,8 +22,8 @@ build:
     - yarn run build
     - ls -al
 
-initialize-ssh-git:
-  stage: initialize
+init-ssh-git:
+  stage: init-ssh-git
   artifacts:
     untracked: true
   only:
@@ -41,7 +40,7 @@ deploy-dev:
   stage: deploy
   dependencies:
     - build
-    - initialize
+    - init-ssh-git
   script:
     - echo "Deploying to dev environment"
     - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll-dev/*"
@@ -56,7 +55,7 @@ deploy-prod:
   stage: deploy
   dependencies:
     - build
-    - initialize
+    - init-ssh-git
   script:
     - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll/*"
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll/ > /dev/null
