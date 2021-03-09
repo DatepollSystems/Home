@@ -26,7 +26,7 @@ build:
 initialize-ssh-git:
   stage: initialize
   artifacts:
-  untracked: true
+    untracked: true
   only:
     - develop
     - main
