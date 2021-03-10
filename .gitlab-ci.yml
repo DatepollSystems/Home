@@ -3,10 +3,6 @@ image: node:latest
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-cache:
-  paths:
-    - node_modules/
-
 stages:
   - build
   - deploy
@@ -15,6 +11,9 @@ build:
   stage: build
   artifacts:
     untracked: true
+  cache:
+    paths:
+      - node_modules/
   script:
     - rm ./package-lock.json
     - yarn install
