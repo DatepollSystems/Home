@@ -8,22 +8,37 @@ import ProjectList from '../modules/Projects/ProjectList';
 
 
 function Home() {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
-  return (
-    <Layout
-      title="Home"
-      description={siteConfig.tagline}>
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx('button button--outline button--secondary button--lg', styles.gitlab_icon_container)}
-              href="https://gitlab.com/DatePoll">
-              <svg viewBox="120 120 340 345" width="24" height="24" className={styles.gitlab_icon}>
-                <path d="M461.514,298.355l-18.049-55.587c0.008,0.025,0.011,0.051,0.019,0.076c-0.009-0.029-0.014-0.058-0.022-0.087
+    const context = useDocusaurusContext();
+    const {siteConfig = {}} = context;
+    return (
+        <Layout
+            title="Home"
+            description={siteConfig.tagline}>
+            <header className={clsx('hero hero--primary', styles.heroBanner)}>
+                <div className="container">
+                    <h1 className="hero__title">{siteConfig.title}</h1>
+                    <p className="hero__subtitle">{siteConfig.tagline}</p>
+                    <div className={styles.buttons}>
+                        <Link
+                            className={clsx('button button--outline button--secondary button--lg', styles.gitlab_icon_container)}
+                            href="https://gitlab.com/DatePoll">
+                            <GitLabLogo/>
+                            GitLab
+                        </Link>
+                    </div>
+                </div>
+            </header>
+            <main className="container margin-vert--lg">
+                <h2 className={clsx('hero__title', styles.center)}>Projects</h2>
+                <ProjectList/>
+            </main>
+        </Layout>
+    );
+}
+
+function GitLabLogo() {
+    return <svg viewBox="120 120 340 345" width="24" height="24" className={styles.gitlab_icon}>
+        <path d="M461.514,298.355l-18.049-55.587c0.008,0.025,0.011,0.051,0.019,0.076c-0.009-0.029-0.014-0.058-0.022-0.087
 		c-0.001-0.002-0.001-0.003-0.001-0.005c0-0.001,0-0.002,0-0.002l-35.83-110.31c-1.96-5.811-7.353-9.711-13.536-9.663
 		c-6.201,0.032-11.446,3.857-13.364,9.748L346.721,237.23H239.408l-34.074-104.712c-1.916-5.886-7.162-9.71-13.362-9.742
 		c-0.025,0-0.049,0-0.075,0c-6.105,0-11.509,3.876-13.49,9.752l-35.732,110.211l-0.005,0.014c0,0.001,0,0.002,0,0.003
@@ -62,18 +77,7 @@ function Home() {
 		c0.252-0.19,0.492-0.394,0.719-0.613c0.009-0.009,0.02-0.016,0.029-0.024c0.012-0.011,0.025-0.02,0.036-0.031
 		C298.503,434.043,298.392,434.143,298.281,434.241z M444.766,308.13l-110.557,80.317l98.703-126.467l13.412,41.307
 		C446.906,305.083,446.279,307.03,444.766,308.13z"/>
-              </svg>
-              GitLab
-            </Link>
-          </div>
-        </div>
-      </header >
-      <main className="container margin-vert--lg">
-        <h2 className={clsx('hero__title', styles.center)}>Projects</h2>
-        <ProjectList></ProjectList>
-      </main>
-    </Layout >
-  );
+    </svg>
 }
 
 export default Home;

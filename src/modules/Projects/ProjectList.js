@@ -37,24 +37,12 @@ function Project({ title, shortDescription, logoUrl, link }) {
 
 function ProjectList() {
   let projectCnt = projects ? Object.keys(projects).length : 0;
-  let numRows = Math.ceil(projectCnt / 3);
-  let offsetLastRow = 0;
-  
-  switch(projectCnt % 3){
-    case 1:
-      offsetLastRow = 4;
-      break;
-    
-    case 2:
-      offsetLastRow = 2;
-      break;
-  }
 
   return (
     <>
       {projectCnt > 0 && (
         <div className={clsx('row', styles.centerLastRow)}>
-          {/* using map funtion because forEach does not return anything */}
+          {/* using map function because forEach does not return anything */}
           {Object.entries(projects).map(([name, project], idx) => (
             <>
               <div key={idx} className="col col--4 margin-bottom--lg">
