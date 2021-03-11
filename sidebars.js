@@ -61,6 +61,9 @@ module.exports = {
     ],
     WaterLevelMonitor: [
         'WaterLevelMonitor/index'
+    ],
+    LocalSIF: [
+      'LocalSIF/index'
     ]
   }
 };
