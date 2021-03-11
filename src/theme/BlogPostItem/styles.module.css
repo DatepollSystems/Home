@@ -6,13 +6,13 @@
  */
 
 .blogPostTitle {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .blogPostDate {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
-.blogPostImage{
-  max-width: 300px;
+.blogPostImage {
+    max-width: 300px;
 }

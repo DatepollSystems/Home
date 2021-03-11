@@ -7,7 +7,7 @@ import styles from './index.module.css';
 import ProjectList from '../modules/Projects/ProjectList';
 
 
-function Home() {
+export default function Home() {
     const context = useDocusaurusContext();
     const {siteConfig = {}} = context;
     return (
@@ -79,5 +79,3 @@ function GitLabLogo() {
 		C446.906,305.083,446.279,307.03,444.766,308.13z"/>
     </svg>
 }
-
-export default Home;

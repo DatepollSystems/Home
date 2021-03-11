@@ -35,21 +35,24 @@ Available markdown features see https://v2.docusaurus.io/docs/markdown-features
 
 ### Adding new projects
 To add a new Project following steps must be done
-1. add Project details to `/src/modules/Projects/Projects.js`
-2. create Project detail Page under `/src/pages/projects/projectName.js` with this code:
-```js
+1. create Project Page under `/src/pages/projects/projectName.tsx` with this code:
+    ```tsx
     import React from 'react';
     import ProjectPage from '../../modules/Projects/ProjectPage'
-    import projects from '../../modules/Projects/Projects'
-
-    function index() {
-        return <ProjectPage {...projects['ProjectName']} />;
-    }
+    import {ProjectDefinition} from "../../modules/Projects/ProjectDefinition";
     
-    export default index;
-```
-3. add Link to just created page in `docusaurus.config.js` under `themeConfig.navbar.items[label=projects].items`
-4. create documentation folder `/docs/ProjectName/` and follow adding docs instructions
+    export const ProjectName: ProjectDefinition = {...} 
+    
+    export default function index() {
+        return <ProjectPage {...ProjectName} />;
+    }
+    ```
+1. add Project-definition to `PROJECTS` array in `/src/modules/Projects/Projects.ts`
+1. add Link to just created page in `docusaurus.config.js` to `projectsNav` array
+   ```js
+   {to: '/projects/projectName', label: 'ProjectName'}
+   ```
+1. create documentation folder `/docs/ProjectName/` and follow adding docs instructions
 
 ### Adding blogposts
 To add a new blogpost a file within the blog directory must be created (name should be in the format `YYY-MMM-DD-blog-post-title.md`)
