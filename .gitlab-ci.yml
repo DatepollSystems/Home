@@ -58,4 +58,6 @@ deploy-prod:
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no ./DatePollSystems-Home-latest.zip $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no "DatePollSystems-Home-${version}.zip" $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
   only:
-    - main
+    - tags
+  except:
+    - branches
