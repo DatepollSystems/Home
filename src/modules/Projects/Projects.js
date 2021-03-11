@@ -60,15 +60,15 @@ const projects = {
     },
     LocalSIF: {
         title: 'LocalSIF',
-        subTitle: 'LocalSIF is a local file share software system, mainly to share data between your phone and you PC.',
-        shortDescription: 'LocalSIF is a local file share software system.',
+        subTitle: 'Share data between your phone and PC!',
+        shortDescription: 'Local file share software system.',
         logoUrl: '/img/logos/localsif.svg',
-        link: '/projects/wlm',
-        imageUrl: '/img/team_spirit.svg',
-        getStartedLink: '/docs/WaterLevelMonitor/index',
+        link: '/projects/sif',
+        imageUrl: '/img/logos/localsif.svg',
+        getStartedLink: '/docs/LocalSIF/index',
         description: (
             <>
-                Water-Level-Monitor is a software system to handle automatic water level tracking and show the data in human readable stats.
+                LocalSIF is a local file share software system, mainly to share data between your phone and your PC.
             </>
         ),
         features: [

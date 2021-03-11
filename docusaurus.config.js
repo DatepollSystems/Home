@@ -27,7 +27,8 @@ module.exports = {
           position: 'left',
           items: [
             { to: '/projects/datepoll', label: 'DatePoll' },
-            { to: '/projects/wlm', label: 'WaterLevelMonitor' }
+            { to: '/projects/wlm', label: 'WaterLevelMonitor' },
+            { to: '/projects/sif', label: 'LocalSIF' }
           ]
         },
         { to: 'blog/', label: 'Blog', position: 'right' },
