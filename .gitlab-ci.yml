@@ -54,7 +54,7 @@ deploy-prod:
     - version=$(git describe --tags $(git rev-list --tags --max-count=1))
     - echo "Uploading prod release zip"
     - zip -r DatePollSystems-Home-latest.zip ./build >> /dev/null
-    - cp "DatePollSystems-Home-${version}.zip" DatePollSystems-Home-latest.zip
+    - cp DatePollSystems-Home-latest.zip "DatePollSystems-Home-${version}.zip"
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no ./DatePollSystems-Home-latest.zip $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
     - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no "DatePollSystems-Home-${version}.zip" $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
   only:
