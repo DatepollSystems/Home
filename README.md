@@ -1,11 +1,5 @@
 # Website
 ## Information
-**Get notified about updates and join us at** &nbsp;
-<a href="https://discord.gg/Tc5kAH5zhH">
-        <img src="https://img.shields.io/discord/697139052717146123?logo=discord&style=for-the-badge" alt="chat on Discord">
-    </a>
-</h4>
-
 * Project website (https://datepoll.org)
 * created with [Docusaurus 2](https://v2.docusaurus.io/)
 
