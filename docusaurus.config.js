@@ -21,12 +21,12 @@ module.exports = {
             defaultMode: 'light',
             disableSwitch: false
         },
-        image: 'img/logos/datepoll.png',  //matatag image (link preview on fb, twitter, ...)
+        image: 'img/logos/datepoll-systems.png',  //matatag image (link preview on fb, twitter, ...)
         navbar: {
             title: 'DatePoll',
             logo: {
                 alt: 'DatePoll Logo',
-                src: 'img/logos/datepoll.svg',
+                src: 'img/logos/datepoll-systems.svg',
             },
             items: [
                 {to: '/', label: 'Home', position: 'left', activeBaseRegex: '^\/$'},
