@@ -7,7 +7,7 @@ export const DatePoll: ProjectDefinition = {
     fileName: __filename,
     subTitle: 'Manage your Club',
     shortDescription: 'Club managing made easy!',
-    logoUrl: '/img/logos/datepoll.svg',
+    logoUrl: '/img/logos/datepoll-dark.png',
     link: '/projects/datepoll',
     imageUrl: '/img/team_spirit.svg',
     getStartedLink: '/docs/DatePoll/index',
