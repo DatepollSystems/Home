@@ -102,11 +102,11 @@ module.exports = {
             {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    editUrl: 'https://gitlab.com/DatePoll/DatePoll-Home/edit/master/docs',
+                    editUrl: 'https://gitlab.com/DatePoll/Datepoll-home/-/edit/develop/',
                 },
                 blog: {
                     showReadingTime: true,
-                    editUrl: 'https://gitlab.com/DatePoll/DatePoll-Home/edit/master/blog',
+                    editUrl: 'https://gitlab.com/DatePoll/Datepoll-home/-/edit/develop/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),

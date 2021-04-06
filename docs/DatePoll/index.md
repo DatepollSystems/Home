@@ -10,7 +10,7 @@ Please visit [this page](./screenshots.md) if you want to see some screenshots.
 Please head to [this page](./installation.md) for a detailed installation process.
 
 ### Updating your existing DatePoll instance.
-We try to make the update process as easy as possible. [Click me](./update.md) for more informations.
+We try to make the update process as easy as possible. [Click me](./update.md) for more information.
 
 ### Develop on DatePoll
 Do you want to develop or play with DatePoll? [Click me](./devAndBuilding.md) for detailed development 
