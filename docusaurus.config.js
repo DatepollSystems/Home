@@ -89,6 +89,10 @@ module.exports = {
                         {
                             label: 'Releases',
                             href: 'https://releases.datepoll.org/'
+                        },
+                        {
+                            label: 'Docker Hub',
+                            href: 'https://hub.docker.com/u/datepollsystems'
                         }
                     ],
                 },
