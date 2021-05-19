@@ -43,18 +43,13 @@ Used to get currently not shown movies
             "trailer_link": "https://youtube.com",
             "poster_link": "https://picture.com/BohemianRhapsody.png",
             "booked_tickets": 0,
-            "movie_year_id": 1,
             "created_at": "2019-08-05T13:03:39.000000Z",
             "updated_at": "2019-11-14T11:33:44.000000Z",
             "worker_id": 33,
             "worker_name": "Peter Smith",
             "emergency_worker_id": null,
             "emergency_worker_name": null,
-            "booked_tickets_for_yourself": 0,
-            "view_movie": {
-                "href": "api/v1/cinema/administration/movie/13",
-                "method": "GET"
-            }
+            "booked_tickets_for_yourself": 0
         },
         {
             "id": 3,
@@ -63,18 +58,13 @@ Used to get currently not shown movies
             "trailer_link": "https://youtube.com",
             "poster_link": "https://picture.com/cinemaposter/avatar.jpg",
             "booked_tickets": 0,
-            "movie_year_id": 1,
             "created_at": "2019-02-05T20:31:44.000000Z",
             "updated_at": "2019-11-15T13:50:28.000000Z",
             "worker_id": 33,
             "worker_name": "Peter Smith",
             "emergency_worker_id": null,
             "emergency_worker_name": null,
-            "booked_tickets_for_yourself": 0,
-            "view_movie": {
-                "href": "api/v1/cinema/administration/movie/3",
-                "method": "GET"
-            }
+            "booked_tickets_for_yourself": 0
         },
         {
             "id": 4,
@@ -83,18 +73,13 @@ Used to get currently not shown movies
             "trailer_link": "https://youtube.com",
             "poster_link": "https://picture.com/wolfofwallstreet.jpg",
             "booked_tickets": 11,
-            "movie_year_id": 1,
             "created_at": "2019-02-05T20:32:32.000000Z",
             "updated_at": "2019-11-15T13:50:38.000000Z",
             "worker_id": null,
             "worker_name": null,
             "emergency_worker_id": 33,
             "emergency_worker_name": "Peter Smith",
-            "booked_tickets_for_yourself": 11,
-            "view_movie": {
-                "href": "api/v1/cinema/administration/movie/4",
-                "method": "GET"
-            }
+            "booked_tickets_for_yourself": 11
         },
         {
             "id": 11,
@@ -103,18 +88,13 @@ Used to get currently not shown movies
             "trailer_link": "https://youtube.com",
             "poster_link": "https://picture.com/inception.jpg",
             "booked_tickets": 0,
-            "movie_year_id": 1,
             "created_at": "2019-07-14T19:10:30.000000Z",
             "updated_at": "2019-11-15T13:50:50.000000Z",
             "worker_id": null,
             "worker_name": null,
             "emergency_worker_id": null,
             "emergency_worker_name": null,
-            "booked_tickets_for_yourself": 0,
-            "view_movie": {
-                "href": "api/v1/cinema/administration/movie/11",
-                "method": "GET"
-            }
+            "booked_tickets_for_yourself": 0
         }
     ]
 }
