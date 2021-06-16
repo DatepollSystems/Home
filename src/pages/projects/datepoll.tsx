@@ -10,7 +10,7 @@ export const DatePoll: ProjectDefinition = {
     logoUrl: '/img/logos/datepoll-dark.png',
     link: '/projects/datepoll',
     imageUrl: '/img/team_spirit.svg',
-    getStartedLink: '/docs/DatePoll/index',
+    getStartedLink: '/docs/DatePoll/screenshots',
     description:
         <>
             DatePoll is a club managing software to support especially voluntary clubs by automating standard
