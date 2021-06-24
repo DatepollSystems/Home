@@ -30,12 +30,10 @@ deploy-dev:
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - echo "Deploying to dev environment"
-    - ssh -o StrictHostKeyChecking=no $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll-dev/*"
-    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-dev/ > /dev/null
-    - echo "Uploading dev release zip"
+    - ssh -o StrictHostKeyChecking=no -o LogLevel=ERROR $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll-dev/*" >> /dev/null
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-dev/ >> /dev/null
     - zip -r DatePollSystems-Home-dev.zip ./build >> /dev/null
-    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR ./DatePollSystems-Home-dev.zip $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR ./DatePollSystems-Home-dev.zip $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ >> /dev/null
   only:
     - develop
 
@@ -44,19 +42,18 @@ deploy-prod:
   dependencies:
     - build
   script:
-    - apt-get update -qq && apt-get install -y -qq zip
+    - apt-get update -qq && apt-get install -y -qq zip git
     - eval "$(ssh-agent -s)"
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - ssh -o StrictHostKeyChecking=no -o LogLevel=ERROR $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll/*"
-    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll/ > /dev/null
+    - ssh -o StrictHostKeyChecking=no -o LogLevel=ERROR $SSH_DEV_USERNAME@$SSH_DEV_HOST -p $SSH_DEV_PORT "rm -rf /var/www/datepoll/*" >> /dev/null
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR -rp ./build/* $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll/ >> /dev/null
     - version=$(git describe --tags $(git rev-list --tags --max-count=1))
-    - echo "Uploading prod release zip"
     - zip -r DatePollSystems-Home-latest.zip ./build >> /dev/null
     - cp DatePollSystems-Home-latest.zip "DatePollSystems-Home-${version}.zip"
-    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR ./DatePollSystems-Home-latest.zip $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
-    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR "DatePollSystems-Home-${version}.zip" $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ > /dev/null
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR ./DatePollSystems-Home-latest.zip $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ >> /dev/null
+    - scp -P $SSH_DEV_PORT -o StrictHostKeyChecking=no -o LogLevel=ERROR "DatePollSystems-Home-${version}.zip" $SSH_DEV_USERNAME@$SSH_DEV_HOST:/var/www/datepoll-share/DatePollSystems-Home/ >> /dev/null
   only:
     - tags
   except:
