@@ -23,7 +23,7 @@ module.exports = {
         },
         image: 'img/logos/datepoll-systems.png',  //matatag image (link preview on fb, twitter, ...)
         navbar: {
-            title: 'DatePoll',
+            title: 'DatePoll Systems',
             logo: {
                 alt: 'DatePoll Logo',
                 src: 'img/logos/datepoll-systems.svg',

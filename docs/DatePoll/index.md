@@ -2,6 +2,13 @@
 title: Home
 ---
 
+### Bist du ein Vereinsmitglied?
+Kontaktiere uns über [support@datepoll.org](mailto:support@datepoll.org) um ein Demo-Konto zu bekommen. Ansonsten
+empfehle uns deinem Vorstand.
+
+### Bist du ein Vorstandmitglied?
+Tritt über [support@datepoll.org](mailto:support@datepoll.org) mit uns in Kontakt um über eine Instanz zu quatschen.
+
 ## Useful links
 ### Screenshots
 Please visit [this page](./screenshots.md) if you want to see some screenshots.

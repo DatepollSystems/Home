@@ -4,6 +4,16 @@ export interface ProjectDefinition extends MainDescriptionProps, ProjectOverview
     getStartedLink: string;
     /** features of the Project */
     features?: ProjectFeatureProps[];
+    /** used by of the Project */
+    usedBy?: ProjectUsedByProps[];
+}
+
+export type ProjectUsedByProps = {
+    /** website url of the Feature */
+    websiteUrl: string;
+    /** url to to image for the feature */
+    imageUrl: string;
+    title: string;
 }
 
 export type ProjectFeatureProps = {
