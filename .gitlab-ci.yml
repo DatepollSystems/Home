@@ -25,7 +25,7 @@ deploy-dev:
   dependencies:
     - build
   script:
-    - apt-get update -qq && apt-get install -y -qq zip
+    - apt-get update -qq && apt-get install -y -qq zip openssh-client >> /dev/null
     - eval "$(ssh-agent -s)"
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
@@ -42,7 +42,7 @@ deploy-prod:
   dependencies:
     - build
   script:
-    - apt-get update -qq && apt-get install -y -qq zip git
+    - apt-get update -qq && apt-get install -y -qq zip git openssh-client >> /dev/null
     - eval "$(ssh-agent -s)"
     - echo "$SSH_DEV_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - mkdir -p ~/.ssh
