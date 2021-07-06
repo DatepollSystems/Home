@@ -91,6 +91,10 @@ module.exports = {
                             href: 'https://releases.datepoll.org/'
                         },
                         {
+                            label: 'NPM Organisation',
+                            href: 'https://www.npmjs.com/org/datepollsystems'
+                        },
+                        {
                             label: 'Docker Hub',
                             href: 'https://hub.docker.com/u/datepollsystems'
                         }
