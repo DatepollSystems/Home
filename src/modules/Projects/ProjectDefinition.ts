@@ -34,6 +34,8 @@ export type MainDescriptionProps = {
     description: JSX.Element;
     /** url to the image for the main description on the Project-page */
     imageUrl: string;
+    /** url to the logo for the main description on the Project-page */
+    logoUrl: string;
     /** (relative) link to the index or Get started of the docu */
     getStartedLink: string;
 }

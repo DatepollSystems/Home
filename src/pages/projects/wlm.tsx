@@ -9,7 +9,7 @@ export const WaterLevelMonitor: ProjectDefinition = {
     shortDescription: 'Automatic water level measurement.',
     logoUrl: '/img/logos/wlm.png',
     link: '/projects/wlm',
-    imageUrl: '/img/logos/wlm.png',
+    imageUrl: '',
     getStartedLink: '/docs/WaterLevelMonitor/index',
     description:
         <>

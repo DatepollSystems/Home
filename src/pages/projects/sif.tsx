@@ -9,7 +9,7 @@ export const LocalSIF: ProjectDefinition = {
     shortDescription: 'Local file share software system.',
     logoUrl: '/img/logos/localsif.svg',
     link: '/projects/sif',
-    imageUrl: '/img/logos/localsif.svg',
+    imageUrl: '',
     getStartedLink: '/docs/LocalSIF/index',
     description:
         <>

@@ -91,7 +91,7 @@ module.exports = {
                             href: 'https://releases.datepoll.org/'
                         },
                         {
-                            label: 'NPM Organisation',
+                            label: 'NPM',
                             href: 'https://www.npmjs.com/org/datepollsystems'
                         },
                         {

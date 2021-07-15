@@ -34,7 +34,7 @@ export default function ProjectPage({
       description={shortDescription}>
       <main>
         <MainDescription description={description} getStartedLink={getStartedLink} imageUrl={imageUrl}
-                         subTitle={subTitle} title={title}/>
+                         subTitle={subTitle} title={title} logoUrl={logoUrl}/>
 
         <UsedBys usedBy={usedBy}/>
         <Features features={features}/>
@@ -43,11 +43,14 @@ export default function ProjectPage({
   );
 }
 
-function MainDescription({title, subTitle, description, imageUrl, getStartedLink}: MainDescriptionProps) {
+function MainDescription({title, subTitle, description, imageUrl, getStartedLink, logoUrl}: MainDescriptionProps) {
   return (
     <div className="container" style={{marginTop: "5vh"}}>
       <div className="row">
         <div className="col s12">
+          <div className="text--center">
+            <img className="materialboxed" src={logoUrl} style={{maxHeight: '100px', marginLeft: 'auto', marginRight: 'auto'}}/>
+          </div>
           <h1 className="here__title text--center">{title}</h1>
           <p className="hero__subtitle text--center">{subTitle}</p>
           <p className="text--center">{description}</p>
