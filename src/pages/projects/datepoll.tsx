@@ -10,7 +10,7 @@ export const DatePoll: ProjectDefinition = {
   logoUrl: '/img/logos/datepoll-dark.png',
   link: '/projects/datepoll',
   imageUrl: '/img/screenshots/showoff.png',
-  getStartedLink: '/docs/DatePoll/index',
+    getStartedLink: '/docs/DatePoll/',
   description:
     <>
       melde deine An-/Abwesenheit, verschicke oder checke E-Mails über den eingebauten Verteiler oder verwalte die Daten

@@ -10,7 +10,7 @@ export const WaterLevelMonitor: ProjectDefinition = {
     logoUrl: '/img/logos/wlm.png',
     link: '/projects/wlm',
     imageUrl: '',
-    getStartedLink: '/docs/WaterLevelMonitor/index',
+    getStartedLink: '/docs/WaterLevelMonitor/',
     description:
         <>
             Water-Level-Monitor is a software system to handle automatic water level tracking and show the data in human

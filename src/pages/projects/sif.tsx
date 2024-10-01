@@ -10,7 +10,7 @@ export const LocalSIF: ProjectDefinition = {
     logoUrl: '/img/logos/localsif.svg',
     link: '/projects/sif',
     imageUrl: '',
-    getStartedLink: '/docs/LocalSIF/index',
+    getStartedLink: '/docs/LocalSIF/',
     description:
         <>
             LocalSIF is a local file share software system, mainly to share data between your phone and your PC.

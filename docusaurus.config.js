@@ -35,7 +35,7 @@ module.exports = {
                     position: 'left',
                     items: projectsNav,
                 },
-                {to: 'blog/', label: 'Blog', position: 'right'},
+                //{to: 'blog/', label: 'Blog', position: 'right'},
                 {to: 'docs/', label: 'Documentation', position: 'right'},
                 {
                     href: 'https://github.com/DatepollSystems',
@@ -58,7 +58,7 @@ module.exports = {
                         },
                         {
                             label: 'DatePoll',
-                            to: 'docs/DatePoll/index',
+                            to: 'docs/DatePoll/',
                         },
                     ],
                 },
@@ -78,10 +78,10 @@ module.exports = {
                 {
                     title: 'More',
                     items: [
-                        {
+                        /*{
                             label: 'Blog',
                             to: 'blog',
-                        },
+                        },*/
                         {
                             label: 'GitHub',
                             href: 'https://github.com/DatePollSystems',
@@ -112,10 +112,10 @@ module.exports = {
                     sidebarPath: require.resolve('./sidebars.js'),
                     editUrl: 'https://github.com/DatepollSystems/Home/edit/main',
                 },
-                blog: {
-                    showReadingTime: true,
+                blog: false,
+                /*blog: {
                     editUrl: 'https://github.com/DatepollSystems/Home/edit/main',
-                },
+                },*/
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
