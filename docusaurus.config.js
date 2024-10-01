@@ -1,4 +1,5 @@
 const projectsNav = [
+    {to: 'https://kellner.team', label: 'kellner.team'},
     {to: '/projects/datepoll', label: 'DatePoll'},
     {to: '/projects/sif', label: 'LocalSIF'},
     {to: '/projects/wlm', label: 'WaterLevelMonitor'},
