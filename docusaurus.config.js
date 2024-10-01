@@ -14,8 +14,8 @@ module.exports = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/logos/favicon.ico',
-    organizationName: 'DatePoll Systems',
-    projectName: 'DatePoll-Home',
+    organizationName: 'DatePollSystems',
+    projectName: 'Home',
     themeConfig: {
         colorMode: {
             defaultMode: 'light',
@@ -38,8 +38,8 @@ module.exports = {
                 {to: 'blog/', label: 'Blog', position: 'right'},
                 {to: 'docs/', label: 'Documentation', position: 'right'},
                 {
-                    href: 'https://gitlab.com/DatePoll',
-                    label: 'GitLab',
+                    href: 'https://github.com/DatepollSystems',
+                    label: 'GitHub',
                     position: 'right',
                     className: 'button button--primary header-gitlab-link'
                 },
@@ -83,8 +83,8 @@ module.exports = {
                             to: 'blog',
                         },
                         {
-                            label: 'GitLab',
-                            href: 'https://gitlab.com/DatePoll',
+                            label: 'GitHub',
+                            href: 'https://github.com/DatePollSystems',
                         },
                         {
                             label: 'Releases',
@@ -110,11 +110,11 @@ module.exports = {
             {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    editUrl: 'https://gitlab.com/DatePoll/Datepoll-home/-/edit/develop/',
+                    editUrl: 'https://github.com/DatepollSystems/Home/edit/main',
                 },
                 blog: {
                     showReadingTime: true,
-                    editUrl: 'https://gitlab.com/DatePoll/Datepoll-home/-/edit/develop/',
+                    editUrl: 'https://github.com/DatepollSystems/Home/edit/main',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
