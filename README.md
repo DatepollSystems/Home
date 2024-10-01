@@ -1,7 +1,8 @@
 # Website
 ## Information
-* Project website (https://datepoll.org)
-* created with [Docusaurus 2](https://v2.docusaurus.io/)
+
+* Project website (https://datepollsystems.org)
+* created with [Docusaurus](https://docusaurus.io/)
 
 # Installation, development & deployment
 ### Installation
