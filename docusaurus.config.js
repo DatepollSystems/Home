@@ -101,8 +101,21 @@ module.exports = {
                         }
                     ],
                 },
+                {
+                    title: 'Legal',
+                    items: [
+                        {
+                            label: 'Imprint',
+                            href: '/imprint'
+                        },
+                        {
+                            label: 'Privacy Policy',
+                            href: '/privacy'
+                        }
+                    ]
+                }
             ],
-            copyright: `© ${new Date().getFullYear()} DatePoll, Built with Docusaurus.`,
+            copyright: `© ${new Date().getFullYear()} DatePoll Systems, Built with Docusaurus.`,
         },
     },
     presets: [
